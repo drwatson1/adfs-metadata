@@ -1,0 +1,117 @@
+<EntityDescriptor ID="_4e97c4ab-c825-4b01-8378-48b18882be74" entityID="http://fs.geocyber.ru/adfs/services/trust" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+    <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+            <ds:Reference URI="#_4e97c4ab-c825-4b01-8378-48b18882be74">
+                <ds:Transforms>
+                    <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                    <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                </ds:Transforms>
+                <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                <ds:DigestValue>Wj35epMf8ul1vd04Rse0iZj5wuhyRHq77Ken+nRorpo=</ds:DigestValue>
+            </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>LiHB4ov4aOuQvbhn2AkuwoFsTB4evwERSCgmJrGeEbsqTMvSiQvimmk30ZagWV26SvMocFc9kJ5B+Ro85F8QpA0hkX0MkYMtMgVjKG8I9P4tr7CGvYd4CWeZershYozHPsvrIJNqtty+1atWE4mzBBqQAfASlKfA0+9pPaIf+O9FaLGx6wSFzXAXenOJjO7iQLVQzpax7NHR13fwnt4R2lRzXssJXEwWYFTNt1x1lipsXlctnrSRsE4ZtOfceFDfCI806MBmPLquEM4mcfgAsnPX3GQqEADTkdbW/TD2pb5ROiaLm+bx6UdHREDYjf4JEes0NIQiRxdYzET5TsFSow==</ds:SignatureValue>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <X509Data>
+                <X509Certificate>MIIC2DCCAcCgAwIBAgIQFDIYq8YLU5BCIiG0yk1KuzANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIFNpZ25pbmcgLSBmcy5nZW9jeWJlci5ydTAeFw0xNzA0MjUwMzQ3MTZaFw0xODA0MjUwMzQ3MTZaMCgxJjAkBgNVBAMTHUFERlMgU2lnbmluZyAtIGZzLmdlb2N5YmVyLnJ1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA19BNHdYwIKbdmepNyfRRHSe30NhbB5CcBWIRPf4WBRH0jAuM0hZAnb91ebV7bCxHc+mZ6JdYK3ovGHIetVGff0hXQS2smpxSuA3YD+B+1YvY5DUFXNfeGAPzFHHPbICXuN9Hhw5TXriQJfQNn+4AKbmwSunHnw3XqDHMCn71Kk4XhEYOpdGHDGpEml0oowh1Ut6LZ3K6FL4I1iNdl8bDfJmpZ9dTbjjRYxgW4z6hxk/mJZl1o4EKK0TtBi3FxBtrU5GbhKzAV8EpGUW074RIkiHtTrL+F1VeSq00M36igRWGuAHMGQ5uweLo8yDhlIJiwf+76s2Xa7NtuhgqM/K83wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAmdIBoziP2BQ+pkqFuUrUZAqv9PPoeo9kfVkwx4GxbSoD9rZZFsr3m4tFYKMXP6/8mkyATO13kfTc1HQGxINarQ0bnu0mjNkqvE11BQWKO5miUQ3VBJS5/WfbcZp4mnmv7HBH1gulzCc3hJz3nZdOkDc8ccHK38F6Vt+vXVTzzo0YpK1/yGWtz1YGBfeqPBwUUXnm9GikbeY3P2tJ7IZgWdV6FpDxkLGFULeDkkWlt1UODSIo/mPLei/UQ1C6v8JDnEeueWCHETmtX97tXsRbl9F2Ga6nDyydetd+nr/OODxywn8eqwgLJ5GIc1gcDkgpmakNtfGA9uu7o8eU8pH01</X509Certificate>
+            </X509Data>
+        </KeyInfo>
+    </ds:Signature>
+    <RoleDescriptor xsi:type="fed:ApplicationServiceType" protocolSupportEnumeration="http://docs.oasis-open.org/ws-sx/ws-trust/200512 http://docs.oasis-open.org/wsfed/federation/200706" ServiceDisplayName="Геокибернетика" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fed="http://docs.oasis-open.org/wsfed/federation/200706">
+        <KeyDescriptor use="encryption">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>MIIC3jCCAcagAwIBAgIQN39AeLZkeqtB8g0xOXAJOzANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDEyBBREZTIEVuY3J5cHRpb24gLSBmcy5nZW9jeWJlci5ydTAeFw0xNzA0MjUwMzQ3MTJaFw0xODA0MjUwMzQ3MTJaMCsxKTAnBgNVBAMTIEFERlMgRW5jcnlwdGlvbiAtIGZzLmdlb2N5YmVyLnJ1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqLvq1S5bNZJOePA65Yx7dvZbu+Xv8OXz09C7bY6THVwjr22KXginLgWXM0Kz5k804ECyvr2fNFDqgHGhuOFdyHjcxf9dl69eQwNN2tAuV9hNC2PK7Rr4UGzId9W4CQe776cWUC0j32VvirVmn4JABnDRI3w6U1AUnrsBhzQJ0r6v8nPa8wpgkuLSD006TsmXX5Bwlm0b0z/kh8uRhyi7XwpnVjvx/57psPhsVcj9Ov0sECU21Iwy+nRCSj/PQTcaHBQYZ7sSp0WzSzmWcTyQvXJUYUN180hmtr8NjyZdIKF11tdkrMeP5xVyN+myy93LBYPfpRi/o+57H7l7Qxkv9wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCcNZq4FRVwb/GWMnLJldBc795qy1AjnwHQqBaDwCVxBX2UNRLJRUYtDKgesYekibzUMc0vCQMgJhbYuThJ17qlxcypV//20LRe5CiT/KDtkGq45a1UPX5zP3eav2JS7SuOxsiTP71nGR/T1WU3sECDcZ2v27wOGiMV3CtsG5h7r+6BQMBxX20CoPDhqEAZUXvYwUWFvgCLC6KC4WMDjz+GtZLYJ6oTBRYuaF6VPRdaLIwyoFJo+rfESbmAKeDJoGoz2nUJ10+5GqAKmtmTzhS8Axrxc7o71V8eb140l/0gYXDQyCFsfkzI6q3W2ShtMniuCT3UUdMUgoY54GCqqiFQ
+                    </X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </KeyDescriptor>
+        <fed:ClaimTypesRequested/>
+        <fed:TargetScopes/>
+        <fed:ApplicationServiceEndpoint/>
+        <fed:PassiveRequestorEndpoint/>
+    </RoleDescriptor>
+    <RoleDescriptor xsi:type="fed:SecurityTokenServiceType" protocolSupportEnumeration="http://docs.oasis-open.org/ws-sx/ws-trust/200512 http://docs.oasis-open.org/wsfed/federation/200706" ServiceDisplayName="Геокибернетика" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fed="http://docs.oasis-open.org/wsfed/federation/200706">
+        <KeyDescriptor use="signing">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>MIIC2DCCAcCgAwIBAgIQFDIYq8YLU5BCIiG0yk1KuzANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIFNpZ25pbmcgLSBmcy5nZW9jeWJlci5ydTAeFw0xNzA0MjUwMzQ3MTZaFw0xODA0MjUwMzQ3MTZaMCgxJjAkBgNVBAMTHUFERlMgU2lnbmluZyAtIGZzLmdlb2N5YmVyLnJ1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA19BNHdYwIKbdmepNyfRRHSe30NhbB5CcBWIRPf4WBRH0jAuM0hZAnb91ebV7bCxHc+mZ6JdYK3ovGHIetVGff0hXQS2smpxSuA3YD+B+1YvY5DUFXNfeGAPzFHHPbICXuN9Hhw5TXriQJfQNn+4AKbmwSunHnw3XqDHMCn71Kk4XhEYOpdGHDGpEml0oowh1Ut6LZ3K6FL4I1iNdl8bDfJmpZ9dTbjjRYxgW4z6hxk/mJZl1o4EKK0TtBi3FxBtrU5GbhKzAV8EpGUW074RIkiHtTrL+F1VeSq00M36igRWGuAHMGQ5uweLo8yDhlIJiwf+76s2Xa7NtuhgqM/K83wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAmdIBoziP2BQ+pkqFuUrUZAqv9PPoeo9kfVkwx4GxbSoD9rZZFsr3m4tFYKMXP6/8mkyATO13kfTc1HQGxINarQ0bnu0mjNkqvE11BQWKO5miUQ3VBJS5/WfbcZp4mnmv7HBH1gulzCc3hJz3nZdOkDc8ccHK38F6Vt+vXVTzzo0YpK1/yGWtz1YGBfeqPBwUUXnm9GikbeY3P2tJ7IZgWdV6FpDxkLGFULeDkkWlt1UODSIo/mPLei/UQ1C6v8JDnEeueWCHETmtX97tXsRbl9F2Ga6nDyydetd+nr/OODxywn8eqwgLJ5GIc1gcDkgpmakNtfGA9uu7o8eU8pH01</X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </KeyDescriptor>
+        <fed:TokenTypesOffered>
+            <fed:TokenType Uri="urn:oasis:names:tc:SAML:2.0:assertion"/>
+            <fed:TokenType Uri="urn:oasis:names:tc:SAML:1.0:assertion"/>
+        </fed:TokenTypesOffered>
+        <fed:ClaimTypesOffered/>
+        <fed:SecurityTokenServiceEndpoint>
+            <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+                <Address>https://fs.geocyber.ru/adfs/services/trust/13/usernamemixed</Address>
+                <Metadata>
+                    <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+                        <wsx:MetadataSection Dialect="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns="">
+                            <wsx:MetadataReference>
+                                <Address xmlns="http://www.w3.org/2005/08/addressing">https://fs.geocyber.ru/adfs/services/trust/mex</Address>
+                            </wsx:MetadataReference>
+                        </wsx:MetadataSection>
+                    </Metadata>
+                </Metadata>
+            </EndpointReference>
+        </fed:SecurityTokenServiceEndpoint>
+        <fed:PassiveRequestorEndpoint>
+            <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+                <Address>https://fs.geocyber.ru/adfs/ls/</Address>
+            </EndpointReference>
+        </fed:PassiveRequestorEndpoint>
+    </RoleDescriptor>
+    <SPSSODescriptor WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <KeyDescriptor use="encryption">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>MIIC3jCCAcagAwIBAgIQN39AeLZkeqtB8g0xOXAJOzANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDEyBBREZTIEVuY3J5cHRpb24gLSBmcy5nZW9jeWJlci5ydTAeFw0xNzA0MjUwMzQ3MTJaFw0xODA0MjUwMzQ3MTJaMCsxKTAnBgNVBAMTIEFERlMgRW5jcnlwdGlvbiAtIGZzLmdlb2N5YmVyLnJ1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqLvq1S5bNZJOePA65Yx7dvZbu+Xv8OXz09C7bY6THVwjr22KXginLgWXM0Kz5k804ECyvr2fNFDqgHGhuOFdyHjcxf9dl69eQwNN2tAuV9hNC2PK7Rr4UGzId9W4CQe776cWUC0j32VvirVmn4JABnDRI3w6U1AUnrsBhzQJ0r6v8nPa8wpgkuLSD006TsmXX5Bwlm0b0z/kh8uRhyi7XwpnVjvx/57psPhsVcj9Ov0sECU21Iwy+nRCSj/PQTcaHBQYZ7sSp0WzSzmWcTyQvXJUYUN180hmtr8NjyZdIKF11tdkrMeP5xVyN+myy93LBYPfpRi/o+57H7l7Qxkv9wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCcNZq4FRVwb/GWMnLJldBc795qy1AjnwHQqBaDwCVxBX2UNRLJRUYtDKgesYekibzUMc0vCQMgJhbYuThJ17qlxcypV//20LRe5CiT/KDtkGq45a1UPX5zP3eav2JS7SuOxsiTP71nGR/T1WU3sECDcZ2v27wOGiMV3CtsG5h7r+6BQMBxX20CoPDhqEAZUXvYwUWFvgCLC6KC4WMDjz+GtZLYJ6oTBRYuaF6VPRdaLIwyoFJo+rfESbmAKeDJoGoz2nUJ10+5GqAKmtmTzhS8Axrxc7o71V8eb140l/0gYXDQyCFsfkzI6q3W2ShtMniuCT3UUdMUgoY54GCqqiFQ</X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </KeyDescriptor>
+        <KeyDescriptor use="signing">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>MIIC2DCCAcCgAwIBAgIQFDIYq8YLU5BCIiG0yk1KuzANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIFNpZ25pbmcgLSBmcy5nZW9jeWJlci5ydTAeFw0xNzA0MjUwMzQ3MTZaFw0xODA0MjUwMzQ3MTZaMCgxJjAkBgNVBAMTHUFERlMgU2lnbmluZyAtIGZzLmdlb2N5YmVyLnJ1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA19BNHdYwIKbdmepNyfRRHSe30NhbB5CcBWIRPf4WBRH0jAuM0hZAnb91ebV7bCxHc+mZ6JdYK3ovGHIetVGff0hXQS2smpxSuA3YD+B+1YvY5DUFXNfeGAPzFHHPbICXuN9Hhw5TXriQJfQNn+4AKbmwSunHnw3XqDHMCn71Kk4XhEYOpdGHDGpEml0oowh1Ut6LZ3K6FL4I1iNdl8bDfJmpZ9dTbjjRYxgW4z6hxk/mJZl1o4EKK0TtBi3FxBtrU5GbhKzAV8EpGUW074RIkiHtTrL+F1VeSq00M36igRWGuAHMGQ5uweLo8yDhlIJiwf+76s2Xa7NtuhgqM/K83wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAmdIBoziP2BQ+pkqFuUrUZAqv9PPoeo9kfVkwx4GxbSoD9rZZFsr3m4tFYKMXP6/8mkyATO13kfTc1HQGxINarQ0bnu0mjNkqvE11BQWKO5miUQ3VBJS5/WfbcZp4mnmv7HBH1gulzCc3hJz3nZdOkDc8ccHK38F6Vt+vXVTzzo0YpK1/yGWtz1YGBfeqPBwUUXnm9GikbeY3P2tJ7IZgWdV6FpDxkLGFULeDkkWlt1UODSIo/mPLei/UQ1C6v8JDnEeueWCHETmtX97tXsRbl9F2Ga6nDyydetd+nr/OODxywn8eqwgLJ5GIc1gcDkgpmakNtfGA9uu7o8eU8pH01</X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </KeyDescriptor>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://fs.geocyber.ru/adfs/ls/"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fs.geocyber.ru/adfs/ls/"/>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fs.geocyber.ru/adfs/ls/" index="0" isDefault="true"/>
+        <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://fs.geocyber.ru/adfs/ls/" index="1"/>
+        <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://fs.geocyber.ru/adfs/ls/" index="2"/>
+    </SPSSODescriptor>
+    <IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <KeyDescriptor use="encryption">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>MIIC3jCCAcagAwIBAgIQN39AeLZkeqtB8g0xOXAJOzANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDEyBBREZTIEVuY3J5cHRpb24gLSBmcy5nZW9jeWJlci5ydTAeFw0xNzA0MjUwMzQ3MTJaFw0xODA0MjUwMzQ3MTJaMCsxKTAnBgNVBAMTIEFERlMgRW5jcnlwdGlvbiAtIGZzLmdlb2N5YmVyLnJ1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqLvq1S5bNZJOePA65Yx7dvZbu+Xv8OXz09C7bY6THVwjr22KXginLgWXM0Kz5k804ECyvr2fNFDqgHGhuOFdyHjcxf9dl69eQwNN2tAuV9hNC2PK7Rr4UGzId9W4CQe776cWUC0j32VvirVmn4JABnDRI3w6U1AUnrsBhzQJ0r6v8nPa8wpgkuLSD006TsmXX5Bwlm0b0z/kh8uRhyi7XwpnVjvx/57psPhsVcj9Ov0sECU21Iwy+nRCSj/PQTcaHBQYZ7sSp0WzSzmWcTyQvXJUYUN180hmtr8NjyZdIKF11tdkrMeP5xVyN+myy93LBYPfpRi/o+57H7l7Qxkv9wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCcNZq4FRVwb/GWMnLJldBc795qy1AjnwHQqBaDwCVxBX2UNRLJRUYtDKgesYekibzUMc0vCQMgJhbYuThJ17qlxcypV//20LRe5CiT/KDtkGq45a1UPX5zP3eav2JS7SuOxsiTP71nGR/T1WU3sECDcZ2v27wOGiMV3CtsG5h7r+6BQMBxX20CoPDhqEAZUXvYwUWFvgCLC6KC4WMDjz+GtZLYJ6oTBRYuaF6VPRdaLIwyoFJo+rfESbmAKeDJoGoz2nUJ10+5GqAKmtmTzhS8Axrxc7o71V8eb140l/0gYXDQyCFsfkzI6q3W2ShtMniuCT3UUdMUgoY54GCqqiFQ</X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </KeyDescriptor>
+        <KeyDescriptor use="signing">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>MIIC2DCCAcCgAwIBAgIQFDIYq8YLU5BCIiG0yk1KuzANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIFNpZ25pbmcgLSBmcy5nZW9jeWJlci5ydTAeFw0xNzA0MjUwMzQ3MTZaFw0xODA0MjUwMzQ3MTZaMCgxJjAkBgNVBAMTHUFERlMgU2lnbmluZyAtIGZzLmdlb2N5YmVyLnJ1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA19BNHdYwIKbdmepNyfRRHSe30NhbB5CcBWIRPf4WBRH0jAuM0hZAnb91ebV7bCxHc+mZ6JdYK3ovGHIetVGff0hXQS2smpxSuA3YD+B+1YvY5DUFXNfeGAPzFHHPbICXuN9Hhw5TXriQJfQNn+4AKbmwSunHnw3XqDHMCn71Kk4XhEYOpdGHDGpEml0oowh1Ut6LZ3K6FL4I1iNdl8bDfJmpZ9dTbjjRYxgW4z6hxk/mJZl1o4EKK0TtBi3FxBtrU5GbhKzAV8EpGUW074RIkiHtTrL+F1VeSq00M36igRWGuAHMGQ5uweLo8yDhlIJiwf+76s2Xa7NtuhgqM/K83wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAmdIBoziP2BQ+pkqFuUrUZAqv9PPoeo9kfVkwx4GxbSoD9rZZFsr3m4tFYKMXP6/8mkyATO13kfTc1HQGxINarQ0bnu0mjNkqvE11BQWKO5miUQ3VBJS5/WfbcZp4mnmv7HBH1gulzCc3hJz3nZdOkDc8ccHK38F6Vt+vXVTzzo0YpK1/yGWtz1YGBfeqPBwUUXnm9GikbeY3P2tJ7IZgWdV6FpDxkLGFULeDkkWlt1UODSIo/mPLei/UQ1C6v8JDnEeueWCHETmtX97tXsRbl9F2Ga6nDyydetd+nr/OODxywn8eqwgLJ5GIc1gcDkgpmakNtfGA9uu7o8eU8pH01</X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </KeyDescriptor>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://fs.geocyber.ru/adfs/ls/"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fs.geocyber.ru/adfs/ls/"/>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://fs.geocyber.ru/adfs/ls/"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fs.geocyber.ru/adfs/ls/"/>
+    </IDPSSODescriptor>
+    <ContactPerson contactType="support"/>
+</EntityDescriptor>

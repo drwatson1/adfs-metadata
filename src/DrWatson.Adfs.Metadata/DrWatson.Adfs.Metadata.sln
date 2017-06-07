@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrWatson.Adfs.Metadata", "DrWatson.Adfs.Metadata.csproj", "{4990096C-ED96-4E67-AFD1-2F9D253E42E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrWatson.Adfs.Metadata.Test", "..\DrWatson.Adfs.Metadata.Test\DrWatson.Adfs.Metadata.Test.csproj", "{9A6341B5-9632-439D-9AB4-342B8E4132C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4990096C-ED96-4E67-AFD1-2F9D253E42E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4990096C-ED96-4E67-AFD1-2F9D253E42E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4990096C-ED96-4E67-AFD1-2F9D253E42E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6341B5-9632-439D-9AB4-342B8E4132C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6341B5-9632-439D-9AB4-342B8E4132C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6341B5-9632-439D-9AB4-342B8E4132C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6341B5-9632-439D-9AB4-342B8E4132C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
