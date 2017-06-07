@@ -4,49 +4,49 @@ using System.Threading.Tasks;
 
 namespace DrWatson.Adfs.Metadata
 {
-    public class AdfsMetadataServiceAsync
+    public class AdfsMetadataLoader
         : AdfsMetadataService
     {
         private Func<Task<string>> Loader;
-        private Task<string> loadTask;
-        private AdfsMetadataParser parser;
+        volatile private Task<AdfsMetadata> loadTask;
 
-        public AdfsMetadataServiceAsync(Func<Task<string>> loader)
+        public AdfsMetadataLoader(Func<Task<string>> loader)
         {
             Loader = loader ?? throw new ArgumentNullException(nameof(loader));
         }
 
-        public string Identity
+        public Task<AdfsMetadata> Get()
         {
-            get
+            if (loadTask != null)
+                return loadTask;
+
+            lock(this)
             {
-                return Ready ? parser.Identity : throw new MetadataServiceException(MetadataServiceException.ErrorCode.NotReady);
+                if (loadTask != null)
+                    return loadTask;
+
+                InternalInvalidate();
+
+                return loadTask;
             }
         }
 
-        public string SigningCertificateString
+        public void Invalidate()
         {
-            get
+            lock (this)
             {
-                return Ready ? parser.SigningCertificateString : throw new MetadataServiceException(MetadataServiceException.ErrorCode.NotReady);
+                InternalInvalidate();
             }
         }
-
-        public X509Certificate2 SigningCertificate
+        
+        private void InternalInvalidate()
         {
-            get
-            {
-                return Ready ? parser.SigningCertificate : throw new MetadataServiceException(MetadataServiceException.ErrorCode.NotReady);
-            }
+            loadTask = StartLoading();
         }
 
-        public bool Ready { get; private set; }
-
-        public async Task Load()
+        private async Task<AdfsMetadata> StartLoading()
         {
-            var metadata = await Loader();
-            parser = new AdfsMetadataParser(metadata);
-            Ready = true;
+            return AdfsMetadataParser.Parse(await Loader());
         }
     }
 }

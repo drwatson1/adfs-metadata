@@ -2,7 +2,7 @@
 
 namespace DrWatson.Adfs.Metadata
 {
-    public class MetadataServiceException
+    class MetadataServiceException
         : Exception
     {
         public enum ErrorCode

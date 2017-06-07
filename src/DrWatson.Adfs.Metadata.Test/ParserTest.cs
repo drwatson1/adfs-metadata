@@ -16,7 +16,7 @@ namespace DrWatson.Adfs.Metadata.Test
         [TestMethod]
         public void ParserShouldNotThrowOnValidMetadata()
         {
-            Action act = () => new AdfsMetadataParser(Metadata);
+            Action act = () => AdfsMetadataParser.Parse(Metadata);
 
             act.ShouldNotThrow();
         }
@@ -24,7 +24,7 @@ namespace DrWatson.Adfs.Metadata.Test
         [TestMethod]
         public void IdentityShouldHaveValidValue()
         {
-            var p = new AdfsMetadataParser(Metadata);
+            var p = AdfsMetadataParser.Parse(Metadata);
 
             p.Identity.Should().Be("http://fs.geocyber.ru/adfs/services/trust");
         }
@@ -32,7 +32,7 @@ namespace DrWatson.Adfs.Metadata.Test
         [TestMethod]
         public void SigningCertificateStringShouldStartsWithValidValue()
         {
-            var p = new AdfsMetadataParser(Metadata);
+            var p = AdfsMetadataParser.Parse(Metadata);
 
             p.SigningCertificateString.Should().StartWith("MIIC2DCCAcCgAwIBAgIQFDIYq8YLU5BCIiG0yk1");
         }
@@ -40,9 +40,9 @@ namespace DrWatson.Adfs.Metadata.Test
         [TestMethod]
         public void SigningCertificateShouldNotBeNull()
         {
-            var p = new AdfsMetadataParser(Metadata);
+            var p = AdfsMetadataParser.Parse(Metadata);
 
-            p.SigningCertificate.Should().NotBeNull();
+            p.GetSigningCertificate().Should().NotBeNull();
         }
     }
 }
