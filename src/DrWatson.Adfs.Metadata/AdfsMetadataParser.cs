@@ -7,19 +7,19 @@ using System.Xml.XPath;
 
 namespace DrWatson.Adfs.Metadata
 {
-    public class Parser
+    public class AdfsMetadataParser
     {
-        public Parser(string metadata)
+        public AdfsMetadataParser(string metadata)
             : this(new StringReader(metadata))
         {
         }
 
-        public Parser(Stream reader)
+        public AdfsMetadataParser(Stream reader)
             : this(new StreamReader(reader))
         {
         }
 
-        public Parser(TextReader reader)
+        public AdfsMetadataParser(TextReader reader)
         {
             Parse(reader);
         }
