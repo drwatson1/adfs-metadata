@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
+using System.Linq;
 
 namespace DrWatson.Adfs.Metadata
 {
@@ -33,14 +34,15 @@ namespace DrWatson.Adfs.Metadata
         {
             var doc = XDocument.Load(reader);
             var namespaceManager = new XmlNamespaceManager(new NameTable());
-            namespaceManager.AddNamespace(String.Empty, "urn:oasis:names:tc:SAML:2.0:metadata");
+            namespaceManager.AddNamespace("d", "urn:oasis:names:tc:SAML:2.0:metadata");
+            namespaceManager.AddNamespace("ds", "http://www.w3.org/2000/09/xmldsig#");
 
             Identity = LoadIdentity(doc, namespaceManager);
         }
 
         private string LoadIdentity(XDocument doc, XmlNamespaceManager namespaceManager)
         {
-            return doc.XPathSelectElement("/EntityDescriptor/@entityID")?.Value;
+            return doc.XPathSelectElement("/d:EntityDescriptor", namespaceManager)?.Attribute("entityID")?.Value;
         }
 
         #endregion
