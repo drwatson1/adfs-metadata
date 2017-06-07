@@ -10,13 +10,13 @@ namespace DrWatson.Adfs.Metadata.Test
     public class ParserTest
     {
         private string BasePath { get => GetType().GetTypeInfo().Assembly.Location + "\\.."; }
-        private string GroomedValidMetadataPath { get => BasePath + @"\TestData\GroomedValidFederationMetadata.xml"; }
-        private string GroomedValidMetadata { get => File.ReadAllText(GroomedValidMetadataPath); }
+        private string MetadataPath { get => BasePath + @"\TestData\FederationMetadata.xml"; }
+        private string Metadata { get => File.ReadAllText(MetadataPath); }
 
         [TestMethod]
         public void ParserShouldNotThrowOnValidMetadata()
         {
-            Action act = () => new Parser(GroomedValidMetadata);
+            Action act = () => new Parser(Metadata);
 
             act.ShouldNotThrow();
         }
@@ -24,9 +24,25 @@ namespace DrWatson.Adfs.Metadata.Test
         [TestMethod]
         public void IdentityShouldHaveValidValue()
         {
-            var p = new Parser(GroomedValidMetadata);
+            var p = new Parser(Metadata);
 
             p.Identity.Should().Be("http://fs.geocyber.ru/adfs/services/trust");
+        }
+
+        [TestMethod]
+        public void SigningCertificateStringShouldStartsWithValidValue()
+        {
+            var p = new Parser(Metadata);
+
+            p.SigningCertificateString.Should().StartWith("MIIC2DCCAcCgAwIBAgIQFDIYq8YLU5BCIiG0yk1");
+        }
+
+        [TestMethod]
+        public void SigningCertificateShouldNotBeNull()
+        {
+            var p = new Parser(Metadata);
+
+            p.SigningCertificate.Should().NotBeNull();
         }
     }
 }

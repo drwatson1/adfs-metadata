@@ -4,7 +4,6 @@ using System.Security.Cryptography.X509Certificates;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
-using System.Linq;
 
 namespace DrWatson.Adfs.Metadata
 {
@@ -30,6 +29,7 @@ namespace DrWatson.Adfs.Metadata
         public X509Certificate2 SigningCertificate { get => new X509Certificate2(Convert.FromBase64String(SigningCertificateString)); }
 
         #region Implementation
+
         private void Parse(TextReader reader)
         {
             var doc = XDocument.Load(reader);
@@ -38,13 +38,19 @@ namespace DrWatson.Adfs.Metadata
             namespaceManager.AddNamespace("ds", "http://www.w3.org/2000/09/xmldsig#");
 
             Identity = LoadIdentity(doc, namespaceManager);
+            SigningCertificateString = LoadSigningCertificateString(doc, namespaceManager);
         }
 
-        private string LoadIdentity(XDocument doc, XmlNamespaceManager namespaceManager)
+        private static string LoadSigningCertificateString(XDocument doc, XmlNamespaceManager namespaceManager)
+        {
+            return doc.XPathSelectElement("/d:EntityDescriptor/ds:Signature/ds:KeyInfo/ds:X509Data/ds:X509Certificate", namespaceManager)?.Value;
+        }
+
+        private static string LoadIdentity(XDocument doc, XmlNamespaceManager namespaceManager)
         {
             return doc.XPathSelectElement("/d:EntityDescriptor", namespaceManager)?.Attribute("entityID")?.Value;
         }
 
-        #endregion
+        #endregion Implementation
     }
 }
