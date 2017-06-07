@@ -12,6 +12,13 @@
     <Description>Simple utilities to parse ADFS 3.0 metadata</Description>
     <Product>ADFS 3.0 Metadata Parser</Product>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Copyright>(c) 2017 DrWatson</Copyright>
+    <PackageProjectUrl>https://github.com/drwatson1/adfs-metadata</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/drwatson1/adfs-metadata</RepositoryUrl>
+    <RepositoryType></RepositoryType>
+    <PackageLicenseUrl>https://github.com/drwatson1/adfs-metadata/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>adfs</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
