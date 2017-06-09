@@ -1,5 +1,18 @@
 # ADFS Metadata Parser
-It is a pack of simple utilities to load and parse ADFS metadata. Parser was tested on ADFS 3.0.
+[![NuGet Status](https://img.shields.io/nuget/v/DrWatson.Adfs.Metadata.svg?style=flat)](https://www.nuget.org/packages/DrWatson.Adfs.Metadata)
+
+It is a small C# library to load and parse ADFS metadata. Parser was tested on ADFS 3.0.
+
+## Features
+
+* Asynchronous loading a metadata directly from ADFS 3.0 server
+* Caching metadata between calls
+* Ability to reload if needed
+* DI-Container friendly
+* Supported metadata (it will be expanded later)
+    * Federation server identity
+    * Signing certificate
+    * More features coming soon... ))
 
 ## Installing
 
