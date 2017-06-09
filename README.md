@@ -1,5 +1,6 @@
 # ADFS Metadata Parser
 [![NuGet](https://img.shields.io/nuget/v/Nuget.Core.svg?style=flat-square)](https://www.nuget.org/packages/DrWatson.Adfs.Metadata)
+
 It is a pack of simple utilities to load and parse ADFS metadata. Parser was tested on ADFS 3.0.
 
 ## Installing
