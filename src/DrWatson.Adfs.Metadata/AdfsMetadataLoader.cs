@@ -17,12 +17,7 @@ namespace DrWatson.Adfs.Metadata
         public AdfsMetadataLoader(string adfsBaseUrl)
         {
             Loader = () =>
-            {
-                using (var client = new HttpClient())
-                {
-                    return client.GetStringAsync(GetMetadataUrl(adfsBaseUrl));
-                }
-            };
+                new HttpClient().GetStringAsync(GetMetadataUrl(adfsBaseUrl));
         }
 
         public AdfsMetadataLoader(Func<Task<string>> loader)
