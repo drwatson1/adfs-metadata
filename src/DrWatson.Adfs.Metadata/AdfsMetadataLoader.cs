@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace DrWatson.Adfs.Metadata
@@ -9,6 +9,21 @@ namespace DrWatson.Adfs.Metadata
     {
         private Func<Task<string>> Loader;
         volatile private Task<AdfsMetadata> loadTask;
+
+        /// <summary>
+        /// Load metadata from a server specified by the base URL. The metadata Url will be constructed automatically.
+        /// </summary>
+        /// <param name="adfsBaseUrl">A base URL of ADFS, for example "https://fs.example.com" </param>
+        public AdfsMetadataLoader(string adfsBaseUrl)
+        {
+            Loader = () =>
+            {
+                using (var client = new HttpClient())
+                {
+                    return client.GetStringAsync(GetMetadataUrl(adfsBaseUrl));
+                }
+            };
+        }
 
         public AdfsMetadataLoader(Func<Task<string>> loader)
         {
@@ -38,7 +53,12 @@ namespace DrWatson.Adfs.Metadata
                 InternalInvalidate();
             }
         }
-        
+
+        private string GetMetadataUrl(string adfsBaseUrl)
+        {
+            return adfsBaseUrl.TrimEnd(new char[] { '/', '\\', ' ' }) + "/FederationMetadata/2007-06/FederationMetadata.xml";
+        }
+
         private void InternalInvalidate()
         {
             loadTask = StartLoading();
