@@ -1,7 +1,4 @@
-﻿using System;
-using System.Security.Cryptography.X509Certificates;
-
-namespace DrWatson.Adfs.Metadata
+﻿namespace DrWatson.Adfs.Metadata
 {
     public class AdfsMetadata
     {
