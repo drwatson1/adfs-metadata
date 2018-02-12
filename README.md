@@ -9,26 +9,20 @@ It is a small C# library to load and parse ADFS metadata. Parser was tested on A
 * Caching metadata between calls
 * Ability to reload if needed
 * DI-Container friendly
-* Supported metadata (it will be expanded later)
+* Supported metadata
     * Federation server identity
     * Signing certificate
-    * More features coming soon... ))
 
 ## Installing
 
 ```bash
-Install-Package DrWatson.Adfs.Metadata -pre
+Install-Package DrWatson.Adfs.Metadata
 ```
 
 ## Usage
 
 ```csharp
-AdfsMetadataService svc = new AdfsMetadataLoader(() =>
-{
-    return new HttpClient().GetStringAsync(
-        "https://fs.example.com/FederationMetadata/2007-06/FederationMetadata.xml"
-    );
-});
+AdfsMetadataService svc = new AdfsMetadataLoader("https://fs.example.com");
 // Exception can be thrown
 var metadata = await svc.Get();
 
@@ -47,4 +41,32 @@ svc.Invalidate();
 
 // Now we have a new metadata
 metadata = await svc.Get();
+```
+
+You can get more control over the loading metadata document if you'll use another constructor for this:
+
+```csharp
+AdfsMetadataService svc = new AdfsMetadataLoader(() =>
+{
+    return new HttpClient().GetStringAsync(
+        "https://fs.example.com/FederationMetadata/2007-06/FederationMetadata.xml"
+    );
+});
+```
+
+Inside the ASP.Net Core application you can use extension methods to register the loader as a service:
+
+```csharp
+services.AddAdfsMetadata("https://fs.example.com");
+```
+
+Or:
+
+```csharp
+services.AddAdfsMetadata(() =>
+{
+    return new HttpClient().GetStringAsync(
+        "https://fs.example.com/FederationMetadata/2007-06/FederationMetadata.xml"
+    );
+});
 ```
