@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <BuildForLiveUnitTesting>false</BuildForLiveUnitTesting>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <Authors>Sergey Tregub (aka DrWatson)</Authors>
     <Company />
     <NeutralLanguage />
-    <AssemblyVersion>1.1.1.0</AssemblyVersion>
-    <FileVersion>1.1.1.0</FileVersion>
+    <AssemblyVersion>1.1.2.0</AssemblyVersion>
+    <FileVersion>1.1.2.0</FileVersion>
     <Description>Simple utility to load and parse ADFS 3.0 metadata</Description>
     <Product>ADFS 3.0 Metadata Parser</Product>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
@@ -17,9 +17,9 @@
     <RepositoryUrl>https://github.com/drwatson1/adfs-metadata</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <PackageLicenseUrl>https://github.com/drwatson1/adfs-metadata/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageTags>adfs .net-core</PackageTags>
-    <PackageReleaseNotes>* Extension methods are added to simplify register metadata loader as a service in the IServiceCollection
-* Fix the loading metadata</PackageReleaseNotes>
+    <PackageTags>adfs .net-core .netstandard</PackageTags>
+    <PackageReleaseNotes>* Support for .NETStandard 2.0
+</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
